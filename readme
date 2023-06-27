@@ -1,1 +1,7 @@
-Fault injection environment based on UART port
+#Fault injection environment based on UART port
+
+//Fault Injection Env   CMD define
+//byte      |      1-2     |   3    |  4-7  |  8-11  |    12    |    13-14    |
+//function  | Begin of cmd | W/R/M  |  Addr |  Len   | Flip-pos |  End of cmd |
+//content   |  A5    5A    | O 1    |       |        |          |   \r\n 0D 0A| for FIE
+//content   |  A5    5A    |  2 3 4 |ImgBase| ImgNo  | 0:all 1:f|   \r\n 0D 0A|
